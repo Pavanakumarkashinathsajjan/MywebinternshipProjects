@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Food Website Design Tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<!-- header section starts 
+-->
+<header>
+
+<a href="#" class="logo"><i class="fas fa-untensils"></i>Dhavalagi resto.</a>
+
+<nav class="navbar">
+    <a class="active" href="#home">home</a>
+    <a href="#dishes">dishes</a>
+    <a href="#about">about</a>
+    <a href="#menu">menu</a>
+    <a href="#review">review</a>
+    <a href="#order">order</a>
+</nav>
+
+<div class="icons">
+    <i class="fas fa-bars" id="menu-bars"></i>
+    <i class="fas fa-search" id="search-icon"></i>
+    <a href="#" class="fas fa-heart"></a>
+    <!-- Add a cart icon in the header -->
+<div id="header-cart-icon" onclick="showCart()">
+    <i class="fas fa-shopping-cart"></i>
+</div>
+
+<!-- Cart modal (hidden by default) -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+</div>
+</div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- search form -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper wrapper">
+            
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>spicy noodles</h3>
+                    <p>As the name suggests, these chilli noodles are quite spicy and great for all chilli sauce lovers. Since these noodles are non-sticky, you can enjoy eating them with long slurps. The noodles are primarily made of wheat flour.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="noo.png" alt="...............">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>fried chicken</h3>
+                    <p>Fried chicken, also known as Southern fried chicken, is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried. The breading adds a crisp coating or crust to the exterior of the chicken while retaining juices in the meat.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="fried.png" alt=".............">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>hot pizza</h3>
+                    <p>It's hot, and succulent at the same time. It's truly a wonderful taste when you take that first bite, and al the flavors of the sauce, cheese, and seasoning go rushing towards your taste buds. Second thing, the sound pizza makes. That crunchy sound you hear when biting into that delicious seasoned crust.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="pizz.png" alt=".................">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- dishes section starts-->
+
+<section class="dishes" id="dishes">
+
+    <h3 class="sub-heading">our dishes</h3>
+    <h1 class="heading">popular dishes</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="img1.png" alt="">
+            <h3>Cheeseburger</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>             
+            </div>
+            <span>₹258.10</span>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="img2.png" alt="">
+            <h3>Momos Recipe</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>             
+            </div>
+            <span>₹165.20</span>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="img3.png" alt="">
+            <h3>Rolls Recipes</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>             
+            </div>
+            <span>₹115.99</span>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="img4.png" alt="">
+            <h3>Chocolate Cakes</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>             
+            </div>
+            <span>₹125.99</span>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="img5.png" alt="">
+            <h3>Honey cake</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>             
+            </div>
+            <span>₹40.99</span>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="img6.png" alt="">
+            <h3>Chicken butter masala</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>             
+            </div>
+            <span>₹245.99</span>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- dishes section ends -->
+
+<!-- about section starts-->
+
+<section class="about" id="about">
+
+<h3 class="sub-heading">about us</h3>
+<h1 class="heading"> why choose us? </h1>
+
+<div class="row">
+
+    <div class="image">
+        <img src="about.png" alt="">
+    </div>
+
+    <div class="content">
+        <h3>best food in the country</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia sapiente maxime accusantium voluptates animi harum eveniet placeat reprehenderit molestias pariatur, ad porro libero vero praesentium culpa nesciunt. In, impedit sint?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus et temporibus dolor voluptate veniam accusantium iusto nulla distinctio eveniet earum, dolore fuga modi porro nobis! Doloribus veritatis iusto ipsa assumenda.</p>
+        <div class="icons-container">
+            <div class="icons">
+                <i class="fas fa-shopping-fast"></i>
+                <span>free delivery</span>
+            </div>
+            <div class="icons">
+                <i class="fas fa-dollar-sign"></i>
+                <span>easy payments</span>
+            </div>            
+            <div class="icons">
+                <i class="fas fa-headset"></i>
+                <span>24/7 services</span>
+            </div>
+        </div>
+        <a href="#" class="btn">learn more</a>
+    </div>
+
+</div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts -->
+
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading">our menu</h3>
+    <h1 class="heading">today's speciality </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="img7.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Paneer Butter Masala Recipe</h3>
+                <p>Paneer Butter Masala is one of India’s most popular paneer gravy recipes, and with good reason! Indian cottage cheese cubes are smothered in a creamy, lightly spiced tomato sauce that is downright delicious.</p>               
+                <span class="price">₹155.00</span>
+                <a href="#" class="btn" onclick="addToCart('Paneer Butter Masala Recipe', 155.00)">Add to Cart</a>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img8.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3> Ice Cream</h3>
+                <p> Its importance during this season extends beyond its delectable taste and refreshing nature. Ice cream provides a delightful respite from the heat, offering a cooling sensation that soothes and satisfies. Beyond its ability to bring joy and create lasting memories, ice cream also serves as a social connector, with families and friends gathering to indulge in this beloved dessert</p>
+                <a href="#" class="btn" onclick="addToCart('Ice Cream', 89.99)">Add to Cart</a>
+                <span class="price">₹89.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img9.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Rasgulla</h3>
+                <p>If there has been one sweet dish that has been a true 'game changer' of the way sweets are perceived and eaten in India, it has to be the luscious rasgulla. This story traces the interesting origins of this iconic Indian sweet.</p>
+                <a href="#" class="btn" onclick="addToCart('Rasgulla', 299.99)">Add to Cart</a>
+                <span class="price">₹299.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img10.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Mysore pak</h3>
+                <p>Mysore pak is an Indian sweet prepared in ghee. It originated in the city of Mysore, one of the major cities in the Indian state of Karnataka. It is made of generous amounts of ghee, sugar, gram flour, and often cardamom.</p>
+                <a href="#" class="btn" onclick="addToCart('Mysore pak', 249.99)">Add to Cart</a>
+                <span class="price">₹249.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img11.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Malai Kofta Recipe</h3>
+                <p>Malai Kofta is a delicious dish of fried balls of potato and paneer in a rich and creamy mild gravy made with sweet onions and tomatoes. This melt-in-your-mouth recipe is a labor of love, but one that is well worth it.</p>
+                <a href="#" class="btn" onclick="addToCart('Malai Kofta Recipe', 149.99)">Add to Cart</a>
+                <span class="price">₹149.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img12.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Kulfi</h3>
+                <p>"Kulfi is a cold dessert made from dairy, which is just frozen. The mixture is usually flavoured milk (cardamom, saffron, pistachio, rose petals) that is slowly cooked in a kadai (wok), which reduces the milk and eventually condenses it. The slow cooking makes the sugar caramelise.</p>
+                <a href="#" class="btn" onclick="addToCart('Kulfi', 74.99)">Add to Cart</a>
+                <span class="price">₹74.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img13.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Gulab jamun</h3>
+                <p>Gulab jamun (pronounced “goe-laab DJA-moen“) is a well-known and popular Indian dessert made of fried dough balls. A type of dumpling, gulab jamun is soaked in a sweet, sticky syrup. Gulab means 'rose water' so, as per tradition, the sugar syrup has a delicate rose flavour.</p>
+                <a href="#" class="btn" onclick="addToCart('Gulab jamun', 280.99)">Add to Cart</a>
+                <span class="price">₹280.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img14.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3> Butter Burfi</h3>
+                <p>As the name suggests, the main ingredient used in the making of the Butter Burfi is butter - and anything made with butter is undoubtedly delicious! Smooth and soft, this burfi will instantly make your mouth water and sail off the back of our mouth, even as you attempt to savour the taste for a little longer.</p>
+                <a href="#" class="btn" onclick="addToCart('Butter Burfi', 529.99)">Add to Cart</a>
+                <span class="price">₹529.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img15.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Rasmalai</h3>
+                <p>Rasmalai is a popular Indian dessert that originates from the state of Bengal. It is a delightful sweet made from soft and spongy cottage cheese dumplings, also known as 'rasgullas', which are soaked in a luscious, creamy, and aromatic milk syrup flavored with cardamom and saffron.</p>
+                <a href="#" class="btn"  onclick="addToCart('Rasmalai', 199.99)">Add to Cart</a>
+                <span class="price">₹199.99</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- review section starts -->
+
+<section class="review" id="review">
+
+    <h3 class="sub-heading">customer's review</h3>
+    <h1 class="heading">what they say</h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="img16.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus unde maxime numquam architecto, id temporibus tempora repellendus earum magni quisquam voluptatibus perferendis voluptates. A est rerum in voluptas temporibus. Tempore.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="img17.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus unde maxime numquam architecto, id temporibus tempora repellendus earum magni quisquam voluptatibus perferendis voluptates. A est rerum in voluptas temporibus. Tempore.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="img18.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus unde maxime numquam architecto, id temporibus tempora repellendus earum magni quisquam voluptatibus perferendis voluptates. A est rerum in voluptas temporibus. Tempore.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="pic4.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus unde maxime numquam architecto, id temporibus tempora repellendus earum magni quisquam voluptatibus perferendis voluptates. A est rerum in voluptas temporibus. Tempore.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- order section starts -->
+
+<section class="order" id="order">
+
+    <h3 class="sub-heading"> order now </h3>
+    <h1 class="heading"> free and fast</h1>
+
+    <form action="">
+
+        <div class="inputBox">
+            <div class="input">
+                <span>your name</span>
+                <input type="text" placeholder="enter your name">
+            </div>
+            <div class="input">
+                <span>your number</span>
+                <input type="number" placeholder="enter your number">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>your order</span>
+                <input type="text" placeholder="enter food name">
+            </div>
+            <div class="input">
+                <span>additional food</span>
+                <input type="test" placeholder="extra wth food">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>how much</span>
+                <input type="number" placeholder="how many orders">
+            </div>
+            <div class="input">
+                <span>date and time</span>
+                <input type="datetime-local">
+            </div>
+        </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your address</span>
+                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="input">
+                    <span>your message</span>
+                    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>   
+
+        <input type="submit" value="order now" class="btn">
+  
+    </form>
+
+</section>
+
+<!-- order section ends -->
+
+<!-- footer section starts -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">india</a> 
+            <a href="#">japan</a> 
+            <a href="#">russia</a> 
+            <a href="#">USA</a> 
+            <a href="#">france</a> 
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a> 
+            <a href="#">dishes</a> 
+            <a href="#">about</a> 
+            <a href="#">menu</a> 
+            <a href="#">reivew</a> 
+            <a href="#">order</a> 
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+123-456-7890</a> 
+            <a href="#">+111-222-3333</a> 
+            <a href="#">pavasajju14@gmail.com</a> 
+            <a href="#">Bangalore,karnataka,india</a> 
+        </div>
+        
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a> 
+            <a href="#">twitter</a> 
+            <a href="#">instagram</a> 
+            <a href="#">linkedin</a> 
+        </div>
+
+    </div>
+
+    <div class="credit">copyright @ 2023 by <span>Pavanakumar</span></div>
+
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="script.js"></script> 
+
+
+</body>
+</html>
